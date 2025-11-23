@@ -6,6 +6,8 @@
     <title>ARTFUL - Для фрилансеров</title>
     <link rel="stylesheet" href="css/freelancers.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
     <!-- Хедер -->
@@ -119,6 +121,39 @@
             </div>
         </div>
     </div>
+<!-- После герой секции добавьте -->
+<section class="registration-section">
+  <div class="section-card">
+    <div class="section-content">
+      <h2>Стать фрилансером</h2>
+      <form id="freelancerForm" class="registration-form">
+        <div class="form-group">
+          <input type="text" id="freelancerName" placeholder="Ваше полное имя" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="freelancerEmail" placeholder="Email для связи" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="freelancerSkills" placeholder="Ваши навыки (через запятую)" required>
+        </div>
+        <div class="form-group">
+          <select id="freelancerCategory" required>
+            <option value="">Выберите категорию</option>
+            <option value="design">🎨 Дизайн</option>
+            <option value="development">💻 Разработка</option>
+            <option value="content">📝 Контент</option>
+            <option value="video">🎬 Видео</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="freelancerBio" placeholder="Расскажите о себе..." rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-freelancer">СТАТЬ ФРИЛАНСЕРОМ</button>
+      </form>
+      <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 5px;"></div>
+    </div>
+  </div>
+</section>
 
     <!-- Футер -->
     <footer id="contacts">
@@ -144,5 +179,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/freelancers.js"></script>
+    <script src="js/firebase-config.js"></script>
 </body>
 </html>

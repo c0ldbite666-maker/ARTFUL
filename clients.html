@@ -6,6 +6,8 @@
     <title>ARTFUL - Для заказчиков</title>
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
     <!-- Хедер -->
@@ -148,7 +150,41 @@
             </div>
         </div>
     </div>
-
+<section class="project-section">
+  <div class="section-card">
+    <div class="section-content">
+      <h2>Разместить проект</h2>
+      <form id="projectForm" class="project-form">
+        <div class="form-group">
+          <input type="text" id="projectTitle" placeholder="Название проекта" required>
+        </div>
+        <div class="form-group">
+          <textarea id="projectDescription" placeholder="Описание проекта..." rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <select id="projectCategory" required>
+            <option value="">Категория проекта</option>
+            <option value="design">🎨 Дизайн</option>
+            <option value="development">💻 Разработка</option>
+            <option value="content">📝 Контент</option>
+            <option value="video">🎬 Видео</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="number" id="projectBudget" placeholder="Бюджет (руб)" min="0" required>
+        </div>
+        <div class="form-group">
+          <input type="text" id="clientName" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="clientEmail" placeholder="Ваш email" required>
+        </div>
+        <button type="submit" class="btn btn-client">РАЗМЕСТИТЬ ПРОЕКТ</button>
+      </form>
+      <div id="projectMessage" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 5px;"></div>
+    </div>
+  </div>
+</section>
     <!-- Футер -->
     <footer id="contacts">
         <div class="logo-futer">
@@ -172,5 +208,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/firebase-config.js"></script>
 </body>
 </html>
