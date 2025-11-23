@@ -6,11 +6,10 @@
     <title>ARTFUL - Для заказчиков</title>
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+
 </head>
 <body>
-    <!-- Хедер -->
+
     <header>
         <nav class="nav-container">
             <div class="logo">ARTFUL</div>
@@ -23,7 +22,7 @@
         </nav>
     </header>
 
-    <!-- Герой секция -->
+
     <section class="hero">
         <div class="hero-content">
             <h1>Найдите идеального исполнителя</h1>
@@ -32,7 +31,7 @@
         </div>
     </section>
 
-    <!-- Процесс работы -->
+ 
     <div class="sections-container">
         <div class="section-card">
             <div class="section-content">
@@ -64,7 +63,7 @@
             </div>
         </div>
 
-        <!-- Статистика -->
+
         <div class="section-card">
             <div class="section-content" style="text-align: center;">
                 <h2>Почему заказчики выбирают ARTFUL?</h2>
@@ -90,7 +89,7 @@
             </div>
         </div>
 
-        <!-- Категории услуг -->
+
         <div class="section-card">
             <div class="section-content">
                 <h2>Популярные услуги</h2>
@@ -125,7 +124,7 @@
             </div>
         </div>
 
-        <!-- Гарантии -->
+
         <div class="guarantee-section">
             <h2 style="text-align: center;">Наши гарантии</h2>
             <p style="text-align: center; max-width: 600px; margin: 1rem auto;">Мы обеспечиваем безопасность и качество каждой сделки</p>
@@ -150,19 +149,20 @@
             </div>
         </div>
     </div>
+    
 <section class="project-section">
   <div class="section-card">
     <div class="section-content">
       <h2>Разместить проект</h2>
       <form id="projectForm" class="project-form">
         <div class="form-group">
-          <input type="text" id="projectTitle" placeholder="Название проекта" required>
+          <input type="text" id="projectTitle" placeholder="Название проекта" >
         </div>
         <div class="form-group">
-          <textarea id="projectDescription" placeholder="Описание проекта..." rows="4" required></textarea>
+          <textarea id="projectDescription" placeholder="Описание проекта..." rows="4" ></textarea>
         </div>
         <div class="form-group">
-          <select id="projectCategory" required>
+          <select id="projectCategory">
             <option value="">Категория проекта</option>
             <option value="design">🎨 Дизайн</option>
             <option value="development">💻 Разработка</option>
@@ -171,13 +171,13 @@
           </select>
         </div>
         <div class="form-group">
-          <input type="number" id="projectBudget" placeholder="Бюджет (руб)" min="0" required>
+          <input type="number" id="projectBudget" placeholder="Бюджет (руб)" min="0" >
         </div>
         <div class="form-group">
-          <input type="text" id="clientName" placeholder="Ваше имя" required>
+          <input type="text" id="clientName" placeholder="Ваше имя">
         </div>
         <div class="form-group">
-          <input type="email" id="clientEmail" placeholder="Ваш email" required>
+          <input type="email" id="clientEmail" placeholder="Ваш email">
         </div>
         <button type="submit" class="btn btn-client">РАЗМЕСТИТЬ ПРОЕКТ</button>
       </form>
@@ -185,7 +185,7 @@
     </div>
   </div>
 </section>
-    <!-- Футер -->
+
     <footer id="contacts">
         <div class="logo-futer">
             <img src="images/Безымянный-2.svg" alt="ARTFUL Logo">
@@ -206,8 +206,8 @@
             <p>&copy; 2026 ARTEFUL Inc. Для бизнеса и творческих проектов</p>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/clients.js"></script>
 
-    <script src="js/script.js"></script>
-    <script src="js/firebase-config.js"></script>
 </body>
 </html>

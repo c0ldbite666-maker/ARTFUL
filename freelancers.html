@@ -6,9 +6,6 @@
     <title>ARTFUL - Для фрилансеров</title>
     <link rel="stylesheet" href="css/freelancers.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
-</head>
 <body>
     <!-- Хедер -->
     <header>
@@ -121,23 +118,23 @@
             </div>
         </div>
     </div>
-<!-- После герой секции добавьте -->
+
 <section class="registration-section">
   <div class="section-card">
     <div class="section-content">
       <h2>Стать фрилансером</h2>
       <form id="freelancerForm" class="registration-form">
         <div class="form-group">
-          <input type="text" id="freelancerName" placeholder="Ваше полное имя" required>
+          <input type="text" id="freelancerName" placeholder="Ваше полное имя" >
         </div>
         <div class="form-group">
-          <input type="email" id="freelancerEmail" placeholder="Email для связи" required>
+          <input type="email" id="freelancerEmail" placeholder="Email для связи" >
         </div>
         <div class="form-group">
-          <input type="text" id="freelancerSkills" placeholder="Ваши навыки (через запятую)" required>
+          <input type="text" id="freelancerSkills" placeholder="Ваши навыки (через запятую)">
         </div>
         <div class="form-group">
-          <select id="freelancerCategory" required>
+          <select id="freelancerCategory" >
             <option value="">Выберите категорию</option>
             <option value="design">🎨 Дизайн</option>
             <option value="development">💻 Разработка</option>
@@ -155,7 +152,7 @@
   </div>
 </section>
 
-    <!-- Футер -->
+
     <footer id="contacts">
         <div class="logo-futer">
             <img src="images/Безымянный-2.svg" alt="ARTFUL Logo">
@@ -179,6 +176,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/freelancers.js"></script>
-    <script src="js/firebase-config.js"></script>
+
 </body>
 </html>

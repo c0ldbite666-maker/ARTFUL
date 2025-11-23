@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTFUL - Место, где рождаются проекты</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+
 </head>
 <body>
-    <!-- Хедер -->
+
     <header>
         <nav class="nav-container">
             <div class="logo">ARTFUL</div>
@@ -22,7 +21,7 @@
         </nav>
     </header>
 
-    <!-- Главная секция с баннером -->
+
     <section class="hero" id="about">
         <img src="images/баннер.png" alt="Баннер ARTFUL" class="banner-image">
         <div class="hero-content">
@@ -31,9 +30,7 @@
         </div>
     </section>
 
-    <!-- Секции выбора -->
     <div class="sections-container">
-        <!-- Секция для фрилансеров -->
         <div class="section-card" id="freelancer">
             <img src="images/фрилансер.jpg" alt="Фрилансеры" class="section-image">
             <div class="section-content">
@@ -43,7 +40,7 @@
             </div>
         </div>
 
-        <!-- Секция для заказчиков -->
+
         <div class="section-card" id="client">
             <img src="images/заказчики.jpg" alt="Заказчики" class="section-image">
             <div class="section-content">
@@ -53,7 +50,7 @@
             </div>
         </div>
     </div>
-<!-- Футер -->
+
 <footer id="contacts">
     <div class="logo-futer">
         <img src="images/Безымянный-2.svg" alt="ARTFUL Logo">
@@ -74,26 +71,7 @@
         <p>&copy; 2026 ARTEFUL Inc. Все права защищены.</p>
     </div>
 </footer>
-    <script src="js/firebase-config.js"></script>
     <script src="js/main.js"></script>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyC59XZPGP4EeExoq3k5QZBxIcF0cZ1GQwI",
-    authDomain: "artful-platform.firebaseapp.com",
-    projectId: "artful-platform",
-    storageBucket: "artful-platform.firebasestorage.app",
-    messagingSenderId: "985393275722",
-    appId: "1:985393275722:web:8262ac7247c689a9b057b3"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
 </body>
 </html>

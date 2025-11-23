@@ -1,4 +1,4 @@
-// Специфичные функции для страницы фрилансеров
+
 class FreelancersPage {
     constructor() {
         this.init();
@@ -47,45 +47,28 @@ if (window.location.pathname.includes('freelancers.html')) {
     });
 }
 
-// js/freelancers.js
 document.addEventListener('DOMContentLoaded', function() {
-  const freelancerForm = document.getElementById('freelancerForm');
-  const formMessage = document.getElementById('formMessage');
+  const form = document.getElementById('freelancerForm');
+  const message = document.getElementById('formMessage');
 
-  freelancerForm.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Получаем данные формы
-    const freelancerData = {
-      name: document.getElementById('freelancerName').value,
-      email: document.getElementById('freelancerEmail').value,
-      skills: document.getElementById('freelancerSkills').value.split(',').map(skill => skill.trim()),
-      category: document.getElementById('freelancerCategory').value,
-      bio: document.getElementById('freelancerBio').value,
-      registrationDate: new Date(),
-      status: 'active'
-    };
-
-    // Сохраняем в Firebase
-    db.collection("freelancers").add(freelancerData)
-      .then((docRef) => {
-        showMessage('✅ Регистрация успешна! Мы свяжемся с вами в ближайшее время.', 'success');
-        freelancerForm.reset();
-      })
-      .catch((error) => {
-        showMessage('❌ Ошибка регистрации: ' + error.message, 'error');
-      });
-  });
-
-  function showMessage(text, type) {
-    formMessage.textContent = text;
-    formMessage.style.display = 'block';
-    formMessage.style.background = type === 'success' ? '#d4edda' : '#f8d7da';
-    formMessage.style.color = type === 'success' ? '#155724' : '#721c24';
-    formMessage.style.border = type === 'success' ? '1px solid #c3e6cb' : '1px solid #f5c6cb';
+    // Просто показываем сообщение об успехе
+    message.textContent = '✅ Регистрация успешна!';
+    message.style.display = 'block';
+    message.style.background = '#d4edda';
+    message.style.color = '#155724';
+    message.style.padding = '1rem';
+    message.style.borderRadius = '5px';
+    message.style.marginTop = '1rem';
     
+    // Очищаем форму
+    form.reset();
+    
+    // Через 3 секунды скрываем сообщение
     setTimeout(() => {
-      formMessage.style.display = 'none';
-    }, 5000);
-  }
+      message.style.display = 'none';
+    }, 3000);
+  });
 });

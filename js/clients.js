@@ -1,4 +1,4 @@
-// Специфичные функции для страницы заказчиков
+
 class ClientsPage {
     constructor() {
         this.init();
@@ -54,43 +54,28 @@ if (window.location.pathname.includes('clients.html')) {
         new ClientsPage();
     });
 }
-// js/script.js
 document.addEventListener('DOMContentLoaded', function() {
-  const projectForm = document.getElementById('projectForm');
-  const projectMessage = document.getElementById('projectMessage');
+  const form = document.getElementById('freelancerForm');
+  const message = document.getElementById('formMessage');
 
-  projectForm.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const projectData = {
-      title: document.getElementById('projectTitle').value,
-      description: document.getElementById('projectDescription').value,
-      category: document.getElementById('projectCategory').value,
-      budget: parseInt(document.getElementById('projectBudget').value),
-      clientName: document.getElementById('clientName').value,
-      clientEmail: document.getElementById('clientEmail').value,
-      createdAt: new Date(),
-      status: 'open'
-    };
-
-    db.collection("projects").add(projectData)
-      .then(() => {
-        showProjectMessage('✅ Проект успешно размещен! Фрилансеры увидят его в ближайшее время.', 'success');
-        projectForm.reset();
-      })
-      .catch((error) => {
-        showProjectMessage('❌ Ошибка: ' + error.message, 'error');
-      });
-  });
-
-  function showProjectMessage(text, type) {
-    projectMessage.textContent = text;
-    projectMessage.style.display = 'block';
-    projectMessage.style.background = type === 'success' ? '#d4edda' : '#f8d7da';
-    projectMessage.style.color = type === 'success' ? '#155724' : '#721c24';
+    // Просто показываем сообщение об успехе
+    message.textContent = '✅ Регистрация успешна!';
+    message.style.display = 'block';
+    message.style.background = '#d4edda';
+    message.style.color = '#155724';
+    message.style.padding = '1rem';
+    message.style.borderRadius = '5px';
+    message.style.marginTop = '1rem';
     
+    // Очищаем форму
+    form.reset();
+    
+    // Через 3 секунды скрываем сообщение
     setTimeout(() => {
-      projectMessage.style.display = 'none';
-    }, 5000);
-  }
+      message.style.display = 'none';
+    }, 3000);
+  });
 });

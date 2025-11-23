@@ -63,7 +63,7 @@ header {
     border-radius: 5px;
 }
 
-/* Герой секция с баннером */
+/*  секция с баннером */
 .hero {
     position: relative;
     text-align: center;
@@ -231,7 +231,7 @@ header {
   margin: 3rem 0;
 }
 
-/* Футер как на главной странице */
+/* Футер */
 footer {
     background: #A2A2A2;
     color: white;
