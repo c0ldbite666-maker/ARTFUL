@@ -1,0 +1,241 @@
+/* Специфичные стили для страницы заказчиков */
+
+/* Герой секция для заказчиков */
+.hero {
+    background: linear-gradient(135deg, #ffd7ac 0%, #f3ba81 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: none;
+    color: white;
+}
+
+/* Процесс работы */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.process-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.process-step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Статистика */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FDBA74;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #666;
+    font-weight: 600;
+}
+
+/* Категории услуг */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.category-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Гарантии */
+.guarantee-section {
+    background: #F8F4EC;
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.guarantee-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guarantee-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.guarantee-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.guarantee-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Контейнер секций */
+.sections-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.section-card {
+    background: #F8F4EC;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.section-content > p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Адаптивность для заказчиков */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .sections-container {
+        gap: 2rem;
+        margin: 2rem auto;
+    }
+    
+    .process-steps,
+    .stats,
+    .categories-grid,
+    .guarantee-items {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .guarantee-section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}

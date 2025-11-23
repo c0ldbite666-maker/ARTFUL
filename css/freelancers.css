@@ -1,0 +1,221 @@
+/* Специфичные стили для страницы фрилансеров */
+
+/* Герой секция для фрилансеров */
+.hero {
+    background: linear-gradient(135deg, #ffd7ac 0%, #f3ba81 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    text-shadow: none;
+    color: white;
+}
+
+/* Унифицированные карточки */
+.unified-card {
+    background: #F8F4EC;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+/* Центрированный контент */
+.centered-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.centered-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.centered-content > p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Преимущества для фрилансеров */
+.freelancer-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.freelancer-benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.freelancer-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.freelancer-benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.freelancer-benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.freelancer-benefit-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Как это работает для фрилансеров */
+.freelancer-how-it-works {
+    background: #F8F4EC;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+}
+
+.freelancer-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.freelancer-step {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.freelancer-step-number {
+    width: 60px;
+    height: 60px;
+    background: #FDBA74;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+}
+
+.freelancer-step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.freelancer-step p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Категории для фрилансеров */
+.freelancer-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.freelancer-category-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.freelancer-category-card:hover {
+    transform: translateY(-3px);
+}
+
+.freelancer-category-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.freelancer-category-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Адаптивность для фрилансеров */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .unified-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .centered-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .freelancer-benefits-grid,
+    .freelancer-steps,
+    .freelancer-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .freelancer-how-it-works {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .unified-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .freelancer-step {
+        padding: 1.5rem 0.5rem;
+    }
+}
